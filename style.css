@@ -7,6 +7,7 @@
 
 body{
  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 /* Navbar */
@@ -140,19 +141,162 @@ body{
 /* HERO CONTENT */
 
 .hero{
-  width: 100%;
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  height: 663px;
+
+  background-color: rgba(242, 240, 241, 1);
 }
 
-.hero-title{
+/* Left side */
+.hero-content{
   display: flex;
+  
+  width: 800px;
+  margin-top: 210px;
+  margin-left: 160px;
+}
+
+
+.hero-title{
   flex-direction: column;
+  
 }
 
 .hero-title h1{
   
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+.hero-description{
+  width: 555px;
+}
+.hero-description p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
 }
 
 .hero-button{
+  display: flex;
+  padding: 16px 54px;
+  border-radius: 62px;
+  border: none; 
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: black;
+  color: white;
+}
+
+.hero-stats{
+  width: 596px;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat{
+  width: 141px;
+  height: 74px;
+  padding: 0 22px;
+  border-right: 1px solid black;
+}
+
+.stat:first-child{
+  padding-left: 0;
+}
+
+.stat:last-child{
+  border-right: none;
+}
+
+/* Right side */
+.hero-image{
+  margin-left: 200px;
+  position: relative;
+}
+.main{
+  height: 4px;
+}
+
+.main img{
+  width: 800px;
+  height: 900px;
+}
+
+/* Brand Banner */
+
+.brand-banner{
+  position: relative;
+  height: 122px;
+  width: 100%;
+  background-color: black;
+}
+
+.brands{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 200px;
+  gap: 101px;
+  width: 100%;
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+}
+brand{
+  display: flex;
+  height: 32px;
+  margin-left: 100px;
+  background-color: azure;
   
+}
+
+/* Collections */
+
+.collections{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 600px;
+  
+  background-color: antiquewhite;
+}
+
+.co-heading{
+  margin-top: 50px;
+}
+
+.collections-heading h1{
+  
+}
+
+.new-dress{
+  position: absolute;
+  display: flex;
+
+  margin-top: 150px;
+  height: 500px;
+  width: 1500px;
+  /* background-color: aquamarine; */
+}
+
+.dress{
+  height: 500px;
+  width: 100%;
+  
+  padding: 0 70px;
+  
+  /* background-color: rgb(202, 121, 14); */
+}
+
+.dress img{
+  display: flex;
+  height: 350px;
+  border-radius: 20px;  
 }
