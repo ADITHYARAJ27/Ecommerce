@@ -145,7 +145,7 @@ body{
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  height: 663px;
+  height: 810px;
 
   background-color: rgba(242, 240, 241, 1);
 }
@@ -198,6 +198,8 @@ body{
 .hero-stats{
   width: 596px;
   height: 74px;
+
+  
   display: flex;
   justify-content: space-between;
 }
@@ -205,8 +207,9 @@ body{
 .stat{
   width: 141px;
   height: 74px;
-  padding: 0 22px;
-  border-right: 1px solid black;
+  padding: 0 5px;
+
+  border-right: 1px solid rgb(218, 216, 216);
 }
 
 .stat:first-child{
@@ -237,6 +240,7 @@ body{
   position: relative;
   height: 122px;
   width: 100%;
+  
   background-color: black;
 }
 
@@ -249,6 +253,7 @@ body{
   position: absolute;
   background-color: rgb(0, 0, 0);
 }
+
 brand{
   display: flex;
   height: 32px;
@@ -257,46 +262,205 @@ brand{
   
 }
 
-/* Collections */
 
-.collections{
+
+          /*  New Arrivals */
+
+
+
+.product-cards{
+  height: 700px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  position: relative;
-  height: 600px;
-  
-  background-color: antiquewhite;
-}
+  align-items: center;
+  gap: 30px;
 
-.co-heading{
-  margin-top: 50px;
-}
-
-.collections-heading h1{
-  
-}
-
-.new-dress{
   position: absolute;
+  background-color: white;
+}
+
+.product-arrival{
+  position: absolute;
+  margin-top: -540px;
+  width: 500px;
+  height: 60px;
+}
+.product-arrival h1{
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: 1px;
+}
+
+.product-card{
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 300px;
+  
+  margin-top: 60px;
+  gap: 20px;
+
+  background-color: white;
+}
+
+.product-card img{
+  display: flex;
+  
+
+  height: 300px;
+  width: 300px;
+}
+
+.product-detail{
+
+}
+
+.product-detail h3{
+
+}
+
+.product-detail{
+
+}
+
+.product-rating{
+  display: flex;
+  margin-left: 1px;
+  gap: 5px;
+  width: 200px;
+  margin-top: -13px;
+
+}
+
+.product-rating span{
+  margin-left: 15px;
+}
+
+.product-rating img{
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.half-star{
+  height: 20px;
+  width: 20px;
+  
+}
+
+.half-star img{
+  height: 20px;
+  width: 12px;
+}
+
+.price{
+  display: flex;
+  font-weight: 800;
+  margin-top: -10px;
+  font-size: 23px;
+}
+
+.old-price{
+  font-size: 23px;
+  margin-left: 9px;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+
+}
+
+.discount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  font-size: 10px;
+  background-color: rgba(255, 51, 51, 0.1);
+  color: rgba(255, 51, 51, 1);
+
+  padding: 0 15px;
+  
+  margin-left: 9px;
+  margin-top: 4px;
+}
+
+.view-all-button{
+  position: absolute;
+  margin-top: 550px;
+  padding: 16px 54px;
+  border-radius: 62px;
+
+  font-size: 16px;
+  line-height: 100%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+              /* Top Sellers */
+
+
+/* 
+.product-cards-1{
+display: flex;
+}
+
+.product-arrival-1{
+
+}
+.product-arrival-1 h1{
+
+}
+
+.product-card-1{
   display: flex;
 
-  margin-top: 150px;
-  height: 500px;
-  width: 1500px;
-  /* background-color: aquamarine; */
+  height: 700px;
+
 }
 
-.dress{
-  height: 500px;
-  width: 100%;
-  
-  padding: 0 70px;
-  
-  /* background-color: rgb(202, 121, 14); */
+.product-card-1 img{
+
 }
 
-.dress img{
-  display: flex;
-  height: 350px;
-  border-radius: 20px;  
+.product-rating-1{
+
+
 }
+
+.product-rating-1 span{
+ 
+}
+
+.product-rating-1 img{
+
+}
+
+.half-star-1{
+
+  
+}
+
+.half-star-1 img{
+
+}
+
+.price-1{
+
+}
+
+.old-price-1{
+
+
+}
+
+.discount-1{
+
+} */
+
+
