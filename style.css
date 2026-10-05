@@ -7,54 +7,49 @@
 
 body{
  font-family: Arial, Helvetica, sans-serif;
- 
+ color: black;
 }
 
+/* learn why is this given
+  - width: min(100% - 64px, 1240px); 
+  - flex-shrink: 0;
+  - align-items: stretch;
+ */
+
+
+
 /* Navbar */
-
-.header{
+.site-header{
   width: 100%;
-  height: 80px;
-
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
+  background-color: #fff;
 }
 
 .navbar{
-  width: 1600px;
-  max-width: 2000px;
-  height: 48px;
+
+  
+  width: min(100% - 64px, 1240px);  
+  min-height: 80px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
-  gap: 30px;
+  gap: 28px;
 }
 
-/* Logo */
-
 .nav-logo{
-  display: flex;
-  align-items: center;
   flex-shrink: 0;
 }
 
 .nav-logo img{
   width: 160px;
   height: auto;
-  display: block;
 }
-
-/* Navigation links */
 
 .nav-links{
   display: flex;
   align-items: center;
-  gap: 40px;
-
+  gap: 28px;
   list-style: none;
   flex-shrink: 0;
 }
@@ -62,76 +57,73 @@ body{
 .nav-links a{
   text-decoration: none;
   font-size: 14px;
-  letter-spacing: 1%;
+  white-space: nowrap;
   color: black;
 }
 
-/* Search bar */
+.nav-links a:hover{
+  color: #777;
+}
 
 .search-bar{
   position: relative;
-  width: 700px;
-  min-width: 200px;
-  
+  flex: 1;
+  max-width: 400px;
+  min-width: 160px;
 }
 
 .search-bar input{
-  width: 700px;
-  height: 48px;
+  /* position: relative; if given here, the search input will be 
+     on top and the search icon will be inside it, */
+  width: 100%;
+  
+  height: 44px;
+  padding: 0 18px 0 48px;
 
   border: none;
-  border-radius: 62px;
-
-  background-color: rgba(240, 240, 240, 1);  
-
-  padding: 0 20px 0 60px;
-
+  border-radius: 30px;
   outline: none;
-
+  background-color: #f0f0f0;
   font-size: 14px;
 }
 
+/* make the border when the search bar is clicked */
+.search-bar input:focus{
+  outline: 1px solid #aaa;
+}
+
 .search-bar button{
+  /* absolute is given to overlap the search-bar input, 
+     so it will be like inside the search box */
   position: absolute;
-  left: 25px;
-  top: 30%;
-
+  left: 16px;
+  top: 50%;
   transform: translate(-50%);
-
-  width: 20px;
-  height: 20px;
-  
-  border: none;
-  background: transparent;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
-
 .search-bar button img{
   width: 18px;
   height: 18px;
 }
 
-/* right side icon */
-
-.nav-icons {
+.nav-icons{
   display: flex;
   align-items: center;
-  gap: 25px;
-
+  gap: 18px;
   flex-shrink: 0;
 }
 
-.nav-icons a {
-  display: flex;
-  align-items: center;
-}
-
-.nav-icons img {
+.nav-icons img{
   width: 22px;
   height: 22px;
   object-fit: contain;
@@ -141,77 +133,81 @@ body{
 /* HERO CONTENT */
 
 .hero{
-  position: relative;
+  min-height: 600px;
+  background-color: #f2f0f1;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: stretch;
 
-  height: 810px;
-
-  background-color: rgba(242, 240, 241, 1);
+  overflow: hidden;
 }
 
-/* Left side */
 .hero-content{
+  width: 100%;
+  max-width: 630px;
+  padding: 70px 20px 55px max(32px, calc((100vw - 1240px) / 2));
+
   display: flex;
-  
-  width: 800px;
-  margin-top: 210px;
-  margin-left: 160px;
-}
-
-
-.hero-title{
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.hero-title h1{
-  
+.hero-content h1{
+  font-size: clamp(38px, 4.2vw, 64px);
   font-weight: 900;
-  font-size: 64px;
-  line-height: 64px;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+  line-height: 0.98;
+  letter-spacing: -1.5px;
+  margin-bottom: 24px;
 }
 
 .hero-description{
-  width: 555px;
-}
-.hero-description p{
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0%;
+  max-width: 520px;
+  margin-bottom: 24px;
+
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .hero-button{
-  display: flex;
-  padding: 16px 54px;
-  border-radius: 62px;
-  border: none; 
-  margin-top: 20px;
-  margin-bottom: 40px;
-  background-color: black;
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 180px;
+  min-height: 48px;
+  padding: 12px 28px;
+  margin-bottom: 38px;
+
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2 ease;
+}
+
+.hero-button:hover{
+  background-color: #333;
 }
 
 .hero-stats{
-  width: 596px;
-  height: 74px;
-
-  
   display: flex;
-  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0;
+  width:100%;
+  max-width: 610px;
 }
 
 .stat{
-  width: 141px;
-  height: 74px;
-  padding: 0 5px;
-
-  border-right: 1px solid rgb(218, 216, 216);
+  padding: 0 20px;
+  border-right: 1px solid #d5d3d4;
 }
-
 .stat:first-child{
   padding-left: 0;
 }
@@ -220,79 +216,106 @@ body{
   border-right: none;
 }
 
-/* Right side */
-.hero-image{
-  margin-left: 200px;
-  position: relative;
-}
-.main{
-  height: 4px;
+.stat h2{
+  font-size: clamp(20px, 2vw, 32px);
+  line-height: 1.2;
+  font-weight: 700;
 }
 
-.main img{
-  width: 800px;
-  height: 900px;
+.stat p{
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.4;
 }
+
+.hero-image{
+  position: relative;
+  min-width:0;
+  min-height:500px;
+  
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.models-image {
+  width: 100%;
+  height: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.hero-star {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.hero-star-large {
+  width: clamp(40px, 5vw, 75px);
+  top: 15%;
+  right: 8%;
+}
+
+.hero-star-small {
+  width: clamp(22px, 2.5vw, 38px);
+  top: 48%;
+  left: 5%;
+}
+
+
 
 /* Brand Banner */
 
-.brand-banner{
-  position: relative;
-  height: 122px;
+
+.brand-banner {
   width: 100%;
-  
-  background-color: black;
+  background-color: #000;
+  padding: 28px 32px;
 }
 
-.brands{
+.brands {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
-  padding: 40px 200px;
-  gap: 101px;
-  width: 100%;
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-}
-
-brand{
-  display: flex;
-  height: 32px;
-  margin-left: 100px;
-  background-color: azure;
-  
-}
-
-
-
-          /*  New Arrivals */
-
-
-
-.product-cards{
-  height: 700px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-
-  position: absolute;
-  background-color: white;
+  justify-content: space-between;
+  gap: 32px;
 }
 
-.product-arrival{
-  position: absolute;
-  margin-top: -540px;
-  width: 500px;
-  height: 60px;
+.brands img {
+  width: auto;
+  max-width: 17%;
+  max-height: 36px;
+  object-fit: contain;
 }
-.product-arrival h1{
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 64px;
-  letter-spacing: 1px;
+
+
+ /*  New Arrivals */
+
+
+
+.product-section{
+  padding-top: 64px;
+  padding-bottom: 52px;
+}
+
+.sectoin-title{
+  margin-bottom: 38px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.7px;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns:  repeat(4, minmax(0,1fr));
+  gap: 24px;
 }
 
 .product-card{
@@ -315,46 +338,19 @@ brand{
   width: 300px;
 }
 
-.product-detail{
 
+.stars {
+  color: #ffc633;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
 }
-
-.product-detail h3{
-
-}
-
-.product-detail{
-
-}
-
-.product-rating{
-  display: flex;
-  margin-left: 1px;
-  gap: 5px;
-  width: 200px;
-  margin-top: -13px;
-
-}
-
-.product-rating span{
-  margin-left: 15px;
-}
-
-.product-rating img{
-  display: flex;
-  width: 20px;
-  height: 20px;
-}
-
-.half-star{
-  height: 20px;
-  width: 20px;
-  
-}
-
-.half-star img{
-  height: 20px;
-  width: 12px;
+.half-star {
+  background: linear-gradient(90deg, #ffc633 50%, #dedede 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .price{
@@ -369,7 +365,6 @@ brand{
   margin-left: 9px;
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.4);
-
 }
 
 .discount{
@@ -390,7 +385,7 @@ brand{
 
 .view-all-button{
   position: absolute;
-  margin-top: 550px;
+  margin-top: 600px;
   padding: 16px 54px;
   border-radius: 62px;
 
@@ -401,66 +396,32 @@ brand{
 }
 
 
+/* Section line */
 
-              /* Top Sellers */
+.section-line {
+  width: 100%;
+  max-width: 1240px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  /* margin: 40px auto; */
 
-
-/* 
-.product-cards-1{
-display: flex;
+  margin: 800px auto;
 }
 
-.product-arrival-1{
+
+
+@media (maxwidth: 1000px) {
+  .navbar{
+    width: calc(100% - 40px);
+    gap: 18px;
+  }
+
+  .nav-links{
+    gap: 16px;
+  }
+
+  .nav-logo img {
+    width: 125px;
+  }
 
 }
-.product-arrival-1 h1{
-
-}
-
-.product-card-1{
-  display: flex;
-
-  height: 700px;
-
-}
-
-.product-card-1 img{
-
-}
-
-.product-rating-1{
-
-
-}
-
-.product-rating-1 span{
- 
-}
-
-.product-rating-1 img{
-
-}
-
-.half-star-1{
-
-  
-}
-
-.half-star-1 img{
-
-}
-
-.price-1{
-
-}
-
-.old-price-1{
-
-
-}
-
-.discount-1{
-
-} */
-
-

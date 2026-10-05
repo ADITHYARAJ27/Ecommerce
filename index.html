@@ -7,48 +7,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-      <nav class="navbar">
-        <!-- logo -->
-        <a href="#" class="nav-logo">
-          <img src="images/SHOP.CO.png" alt="shop.co">
+  <!-- NAVIGATION BAR -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main Navigation">
+
+      <a href="#" class="nav-logo" aria-label="SHOP.CO home">
+        <img src="images/SHOP.CO.png" alt="SHOP.CO">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">On Sale</a></li>
+        <li><a href="#new-arrivals">New Arrivals</a></li>
+        <li><a href="#top-selling">Brands</a></li>
+      </ul>
+
+      <form class="search-bar" role="search">
+        <button type="submit" aria-label="Search">
+          <img src="images/search.png" alt="">
+        </button>
+        <input
+          type="search"
+          placeholder="Search for products..."
+          aria-label="Search products"
+        >
+      </form>
+
+      <div class="nav-icons">
+        <a href="#" aria-label="Shopping-cart">
+          <img src="images/cart.png" alt="">
         </a>
+        <a href="#" aria-label="Account">
+          <img src="images/account.png" alt="">
+        </a>
+      </div>
 
-        <!-- Navigation -->
-        <ul class="nav-links">
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">On Sale</a></li>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Brands</a></li>
-        </ul>
-
-        <!-- Search -->
-        <div class="search-bar">
-          <button type="button" aria-label="Search">
-            <img src="images/search.png" alt="Search icon">
-          </button>
-          <input type="text" placeholder="Search for products...">
-        </div>
-
-        <!-- icon -->
-        <div class="nav-icons">
-          <a href="#" aria-label="Shopping cart">
-            <img src="images/cart.png" alt="">
-          </a>
-          <a href="#" aria-label="Account">
-            <img src="images/account.png" alt="">
-          </a>
-        </div>
-      
     </nav>
   </header>
 
-  <!-- HERO -->
+  <main>
 
-  <section class="hero">
+    <!-- HERO -->
 
-    <div class="hero-content">
-      <div class="hero-title">
+    <section class="hero">
+      <div class="hero-content">
+        
         <h1>
           FIND CLOTHES <br>
           THAT MATCHES <br> 
@@ -59,231 +61,189 @@
           Browse through our diverse range of meticulously crafted garments, designed 
           to bring out your individuality and cater to your sense of style.
         </P>
-        <button class="hero-button" ta>Shop Now</button>
+        <a href="#new-arrivals" class="hero-button">Shop Now</a>
 
-      <div class="hero-stats">
-        <div class="stat">
-          <h2>200+</h2>
-          <p>International Brands</p>
-        </div>
-        <div class="stat">
-          <h2>2,000+</h2>
-          <p>High-Quality Products</p>
-        </div>
-        <div class="stat">
-          <h2>30,000+</h2>
-          <p>Happy Customers</p>
-        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <h2>200+</h2>
+            <p>International Brands</p>
+          </div>
+          <div class="stat">
+            <h2>2,000+</h2>
+            <p>High-Quality Products</p>
+          </div>
+          <div class="stat">
+            <h2>30,000+</h2>
+            <p>Happy Customers</p>
+          </div>
+        </div>        
       </div>
-    </div>
 
-    <div class="hero-image">
-      <div class="main">
-        <img src="images/models.jpg" alt="">
-      </div> 
-      <div  class="rstar">
-        <img src="images/bigstar.png" alt="">
+      <div class="hero-image">
+        <img 
+          class="models-image"
+          src="images/models.jpg" 
+          alt="Models wearing modern fashion"
+        >
+        <img 
+          class="hero-star hero-star-large"
+          src="images/bigstar.png" 
+          alt=""
+          >
+          <img 
+            class="hero-star hero-star-small" 
+            src="images/smallstar.png" 
+            alt=""
+          >
       </div>
-      <div class="lstar">
-        <img src="images/smallstar.png" alt="">
-      </div>
-    </div>
+    </section>
 
-  </section>
+    <!-- Brand Banner -->
+     
+    <section class="brand-banner" aria-label="Featured brands">
+      <div class="brands">
+        <img src="images/versace.png" alt="versace">
+        <img src="images/zara.png" alt="zara">
+        <img src="images/gucci.png" alt="gucci">
+        <img src="images/prada.png" alt="prada">
+        <img src="images/ck.png" alt="ck">
+      </div>
+    </section>
 
-  <section class="brand-banner">
-    <div class="brands">
-      <div class="brand"><img src="images/versace.png" alt=""></div>
-      <div class="brand"><img src="images/zara.png" alt=""></div>
-      <div class="brand"><img src="images/gucci.png" alt=""></div>
-      <div class="brand"><img src="images/prada.png" alt=""></div>
-      <div class="brand"><img src="images/ck.png" alt=""></div>
-    </div>
-  </section>
+
+    <!-- New Arrivals -->
+
+    <section class="product-section">
+      <div class="section-title">
+        <h2>NEW ARRIVALS</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/blackt.png" alt="">
+          <div class="product-detail">
+            <h3>T-SHIRT WITH TAPE DETAILS</h3>
+          </div>  
+
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+            <span>4.5/5</span>
+          </div>
+          <div class="price">
+            <span>$120</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/shirt.png" alt="">
+          <div class="product-detail">
+            <h3>SKINNY FIT JEANS</h3>
+          </div>
+
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span>3.5/5</span>
+      
+          <div class="price">
+            <span>$240</span>
+            <span class="old-price">$260</span>
+            <span class="discount">-20%</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/jeans.png" alt="">
+          <div class="product-detail">
+            <h3>CHECKERED SHIRT</h3>
+          </div>
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span>4.5/5</span>
+          </div>
+          <div class="price">
+            <span>$180</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="images/oranget.png" alt="">
+          <div class="product-detail">
+            <h3>SLEEVE STRIPED T-SHIRT</h3>
+          </div>
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+            <span>4.5/5</span>
+          </div>
+          <div class="price">
+            <span>$130</span>
+            <span class="old-price">$160</span>
+            <span class="discount">-30%</span>
+          </div>
+        </article>
+      </div>
+      <button class="view-all-button">View All</button>
+    </section>
+
+    
+  <div class="section-line"></div>
 
 
-  <!-- New Arrivals -->
+    <!-- Top Sellers -->
 
-  <section class="product-cards">
-    <div class="product-arrival">
-      <h1>NEW ARRIVALS</h1>
-    </div>
+    <section class="product-section">
+      <div class="section-title">
+        <h2>TOP SELLING</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/stripped.png" alt="">
+          <div class="product-detail">
+            <h3>VERTICAL STRIPED SHIRT</h3>
+          </div>  
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span> 5.0/5</span>
+          
+          <div class="price">
+            <span>$212</span>
+            <span class="old-price">$232</span>
+            <span class="discount">-20%</span>
+          </div>
+        </article>
 
-    <div class="product-card">
-      <img src="images/blackt.png" alt="">
-      <div class="product-detail">
-        <h3>T-SHIRT WITH TAPE DETAILS</h3>
-      </div>  
+        <article class="product-card">
+          <img src="images/couraget.png" alt="">
+          <div class="product-detail">
+            <h3>COURAGE GRAPHIC T-SHIRT</h3>
+          </div>
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span>4.5/5</span>
 
-      <div class="product-rating">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
-      </div>
-      <div class="price">
-        <span>$120</span>
-      </div>
-    </div>
+          <div class="price">
+            <span>$145</span>
+          </div>
+        </article>
 
-    <div class="product-card">
-      <img src="images/shirt.png" alt="">
-      <div class="product-detail">
-        <h3>SKINNY FIT JEANS</h3>
-      </div>
-      <div class="product-rating">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>3.5/5</span>
-      </div>
-      <div class="price">
-        <span>$240</span>
-        <span class="old-price">$260</span>
-        <span class="discount">-20%</span>
-      </div>
-    </div>
+        <article class="product-card-">
+          <img src="images/trouser.png" alt="">
+          <div class="product-detail">
+            <h3>LOOSE FIT BERMUDA SHORTS</h3>
+          </div>
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span>3.0/5</span>  
+          <div class="price">
+            <span>$80</span>
+          </div>
+        </article>
 
-    <div class="product-card">
-      <img src="images/jeans.png" alt="">
-      <div class="product-detail">
-        <h3>CHECKERED SHIRT</h3>
-      </div>
-      <div class="product-rating">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
-      </div>
-      <div class="price">
-        <span>$180</span>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="images/oranget.png" alt="">
-      <div class="product-detail">
-        <h3>SLEEVE STRIPED T-SHIRT</h3>
-      </div>
-      <div class="product-rating">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
-      </div>
-      <div class="price">
-        <span>$130</span>
-        <span class="old-price">$160</span>
-        <span class="discount">-30%</span>
-      </div>
-    </div>
-    <button class="view-all-button">View All</button>
-  </section>
+        <article class="product-card">
+          <img src="images/blackjeans.png" alt="">
+          <div class="product-detail">
+            <h3>FADED SKINNY JEANS</h3>
+          </div>
+          <span class="stars">★★★★<span class="half-star">★</span></span>
+          <span>4.5/5</span>
 
-  <!-- Top Sellers -->
-
-  <section class="product-cards-1">
-    <div class="product-arrival-1">
-      <h1>NEW ARRIVALS</h1>
-    </div>
-
-    <div class="product-card-1">
-      <img src="images/blackt.png" alt="">
-      <div class="product-detail-1">
-        <h3>T-SHIRT WITH TAPE DETAILS</h3>
-      </div>  
-
-      <div class="product-rating-1">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star-1">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
+          <div class="price">
+            <span>$210</span>
+          </div>
+        </article>
       </div>
-      <div class="price-1">
-        <span>$120</span>
-      </div>
-    </div>
-
-    <div class="product-card-1">
-      <img src="images/shirt.png" alt="">
-      <div class="product-detail-1">
-        <h3>SKINNY FIT JEANS</h3>
-      </div>
-      <div class="product-rating-1">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star-1">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>3.5/5</span>
-      </div>
-      <div class="price-1">
-        <span>$240</span>
-        <span class="old-price-1">$260</span>
-        <span class="discount-1">-20%</span>
-      </div>
-    </div>
-
-    <div class="product-card-1">
-      <img src="images/jeans.png" alt="">
-      <div class="product-detail-1">
-        <h3>CHECKERED SHIRT</h3>
-      </div>
-      <div class="product-rating-1">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star-1">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
-      </div>
-      <div class="price-1">
-        <span>$180</span>
-      </div>
-    </div>
-    <div class="product-card-1">
-      <img src="images/oranget.png" alt="">
-      <div class="product-detail-1">
-        <h3>SLEEVE STRIPED T-SHIRT</h3>
-      </div>
-      <div class="product-rating-1">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <img src="images/fullstar.png" alt="">
-        <div  class="half-star-1">
-          <img src="images/halfstar.png" alt="">
-        </div>
-        <span>4.5/5</span>
-      </div>
-      <div class="price-1">
-        <span>$130</span>
-        <span class="old-price-1">$160</span>
-        <span class="discount-1">-30%</span>
-      </div>
-    </div>
-  </section>
-
+      <button class="view-all-button">View All</button>
+    </section>
+  </main> 
 </body>
 </html>
